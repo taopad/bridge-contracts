@@ -37,7 +37,7 @@ export PRIVATE_KEY=0x...123 # deployer private key
 export ETHERSCAN_API_KEY=XYZ # Etherscan APY Key to verify contracts for Arbitrum
 export RPC_URL=https://alchemy.io/.../ # RPC Url for Arbitrum
 
-npx hardhat --network arbitrum deploy --tags arb-oft --write true
+npx hardhat --network Arbitrum deploy --tags arb-oft --write true
 ```
 
 ### TBD
