@@ -40,5 +40,13 @@ export RPC_URL=https://alchemy.io/.../ # RPC Url for Arbitrum
 npx hardhat --network Arbitrum deploy --tags arb-oft --write true
 ```
 
-### TBD
-- Avalanche OFTv2 Implementation
+### Deploying WTAO OFT on Base
+
+```shell
+npm install
+export PRIVATE_KEY=0x...123 # deployer private key
+export ETHERSCAN_API_KEY=XYZ # Etherscan APY Key to verify contracts for Base
+export RPC_URL=https://alchemy.io/.../ # RPC Url for Base
+
+npx hardhat --network Base deploy --tags arb-oft --write true
+```
