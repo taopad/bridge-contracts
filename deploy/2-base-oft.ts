@@ -8,6 +8,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     // LayerZero Base endpoint
     const lzEndpoint = "0xb6319cC6c8c27A8F5dAF0dD3DF91EA35C4720dd7";
 
+    console.log(`🚀 Deploying LayerZero $WTAO on Base with endpoint: ${lzEndpoint} `)
 
     const { deployer } = await getNamedAccounts();
 
@@ -38,6 +39,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     await execute("LayerZeroWTAOBase", { from: deployer, log: true }, "setTrustedRemoteAddress", 110, "0xa14a26bb46e236da394da6B09a5b4CF737ce707b");
     await execute("LayerZeroWTAOBase", { from: deployer, log: true }, "setMinDstGas", 101, 0, 200000);
     await execute("LayerZeroWTAOBase", { from: deployer, log: true }, "setMinDstGas", 110, 0, 2000000);
+
+    console.log("✅ $WTAO on Base setup complete");
 
 };
 export default func;

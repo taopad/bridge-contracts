@@ -20,6 +20,21 @@ const config: HardhatUserConfig = {
       },
     },
   },
+  etherscan: {
+    apiKey: {
+      Base: process.env.ETHERSCAN_API_KEY || "",
+    },
+    customChains: [
+      {
+        network: "Base",
+        chainId: 8453,
+        urls: {
+          apiURL: "https://api.basescan.org/api",
+          browserURL: "https://basescan.org/",
+        }
+      },
+    ],
+  },
   networks: {
     hardhat: {
       forking: {
